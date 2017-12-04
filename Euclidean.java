@@ -31,11 +31,5 @@ public class Euclidean {
             }
         }        
         return chocolates;
-    }    
-    
-    public static void main(String[] args) {
-        
-        System.out.println("Chocolates that you will eat: " + new Euclidean().euclidean(10, 4));
-        
     }
 }

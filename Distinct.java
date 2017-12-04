@@ -13,28 +13,23 @@ public class Distinct {
     
     public int distinct(int[]array){        
         
-        int counter = 0;
+        int counter = 0;//number of distinct elements
           
         if(array.length > 0){
-            counter ++;
+            
+            counter ++;//the first element will be the first distinct
+            
+            //starts from the second element in array
             for(int i = 1; i< array.length; i++){
+                //checks if we already found array[i] before
                 for (int j = i-1; j >= 0; j--)
                     if(array[i] == array[j])
-                        break;
-                    else if (j == 0)
+                        break;//if we have already passed the number array[i], goes to next i
+                    
+                    else if (j == 0)//if we reached the beggining of array, array[i] is a distinct number
                         counter ++;                          
             }                
         }      
         return counter;
-    }
-    
-    public static void main(String[] args) {
-               
-        int[]array;
-        
-        array = new Random().ints(100000, -1000000, 1000000).toArray();
-        //array = new Random().ints(10, -20, 20).toArray();
-        //array = new int[]{2,1,1,2,3,1, 1, 2, 4, 9, 9, 9};                   
-        System.out.println("Number of distinct values: " + new Distinct().distinct(array));                
     }
 }

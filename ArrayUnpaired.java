@@ -26,12 +26,5 @@ public class ArrayUnpaired {
             }
         }               
         return unpaired;
-    }
-    public static void main(String[] args) {
-        
-        //int[]array = {1, 3, 4, 7, 0, 10, 12, 8, 1, 3, 0, 10, 12, 4, 7, 12, 1, 1, 12};
-        int[]array = {9, 3, 9, 3, 9, 7, 9};
-        
-        System.out.println("The unpaired element is: " + new ArrayUnpaired().arrayUnpaired(array));
-    }
+    }    
 }
